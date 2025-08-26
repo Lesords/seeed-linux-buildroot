@@ -75,7 +75,7 @@ jobs:
           mercurial subversion
           
       - name: Checkout Buildroot sources
-        run: git clone --depth=1 -b master https://github.com/Seeed-Studio/seeed-linux-buildroot.git
+        run: git clone --depth=1 -b feat/recomputer-R2x https://github.com/Lesords/seeed-linux-buildroot.git
 
       - name: Seeed buildroot cache
         uses: actions/cache@v4
@@ -94,6 +94,7 @@ jobs:
           cd ${{ github.workspace }}/seeed-linux-buildroot/
           new_dev_name=$(echo "${{ inputs.dev_name }}" | sed 's/-/_/g')
           make ${new_dev_name}_defconfig
+          cat .config
 
       - name: Build
         run: |
