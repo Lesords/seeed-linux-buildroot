@@ -1,0 +1,4 @@
+config BR2_PACKAGE_HAILORT_DEMO
+    bool "hailo demo"
+    help
+      Build and install Hailo demo.

@@ -10,6 +10,7 @@ menu "Target packages"
 	source "package/skeleton-init-sysv/Config.in"
 	source "package/reterminal_qt5_demo/Config.in"
 	source "package/hailort-driver/Config.in"
+	source "package/hailort-demo/Config.in"
 
 menu "Audio and video applications"
 	source "package/alsa-utils/Config.in"
